@@ -1,0 +1,17 @@
+@import "../../Style.scss";
+
+#HeaderWrap{ @extend %fullWrap;
+    @include paddingAll(15px);
+    background-color: #1c1c1c;
+}
+#HeaderWrap .mainLogo{ height:42px; float: left; max-width: 100%; }
+.mainLogoWrap{ @extend %left; }
+
+
+
+
+  
+
+
+
+

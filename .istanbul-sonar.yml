@@ -1,0 +1,42 @@
+verbose: false
+instrumentation:
+    extensions: [".js",".jsx"]
+    root: ./app
+    default-excludes: true
+    include-all-sources: true
+    excludes: ["assets/**", "mocks/**", "apis/**", "**/*.test.js*", "**/index.js", "**/index.jsx", "**/__stories/**", "**/actionTypes/**", "**/sagas/**", "**/routes.jsx", "**/*Routes.jsx", "**/*
+    .config.js", "**/config.js", "**/config/**", "featureFlags.js", "messagesTexts.js", "preferences.js"]
+    variable: __coverage__
+reporting:
+    print: summary
+    reports:
+        - lcovonly
+    dir: ./coverage
+    watermarks:
+        statements: [89.99, 90]
+        lines: [89.99, 90]
+        functions: [99.99, 100]
+        branches: [89.99, 90]
+    report-config:
+        clover: {file: clover.xml}
+        cobertura: {file: cobertura-coverage.xml}
+        json: {file: coverage-final.json}
+        json-summary: {file: coverage-summary.json}
+        lcovonly: {file: lcov.info}
+        teamcity: {file: null, blockName: Code Coverage Summary}
+        text: {file: null, maxCols: 0}
+        text-lcov: {file: lcov.info}
+        text-summary: {file: null}
+check:
+    global:
+        statements: 90
+        lines: 90
+        branches: 90
+        functions: 100
+        excludes: []
+    each:
+        statements: 90
+        lines: 90
+        branches: 90
+        functions: 100
+        excludes: []

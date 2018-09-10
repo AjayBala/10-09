@@ -1,0 +1,258 @@
+/***********************************/
+@import './fonts.scss';
+
+
+/*=====RESET STYLE =====*/
+*{margin:0;padding:0;outline:none;}
+body{ font-family: Helvetica, Arial, sans-serif;}
+body{ font-size:14px;margin:0;padding:0; @extend %font-helvetica; }
+ul,ol, li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal; margin: 0px;}
+a{text-decoration:none;outline:none; cursor: pointer;}
+a:hover{text-decoration:none;}
+img{border:0px;outline:none;display:block;}
+
+
+/*=====FONT STYLE=====*/
+%font-helvetica{
+    font-family: 'helvetica-regular';
+} 
+
+%font-helvetica-neue{
+    font-family: 'helvetica-neue-regular';
+}
+
+
+/*=====FOR ALIGN STYLE =====*/
+%left{ float:left !important;}
+
+%right{ float:right !important;}
+
+%clear{ clear: both !important;}
+
+%fullWrap{ width:100%; float: left; box-sizing: border-box;}
+
+%halfWrap{ width:50%; float: left; box-sizing: border-box;}
+
+%textAlignCenter{
+    text-align: center;
+}
+
+
+%centerAlignWrap{ @extend %fullWrap; @extend %textAlignCenter;
+    >*{
+        display: inline-block;
+    }
+}
+
+.textLeftAlign{ text-align: left;}
+.textRightAlign{ text-align: right;}
+.textCenterAlign{ text-align: center;}
+
+@mixin centerAlignBoxMaxWidth($maxWidth){ width:100%; margin: 0 auto; max-width: $maxWidth;}
+
+@mixin marginAll($marginAll) { margin: $marginAll;}
+@mixin marginTopBottom($marginTopBottom) { margin: $marginTopBottom 0px;}
+@mixin marginLeftRight($marginLeftRight) { margin: 0px $marginLeftRight;}
+
+@mixin paddingAll($paddingAll) { padding: $paddingAll;}
+@mixin paddingTopBottom($paddingTopBottom) { padding: $paddingTopBottom 0px;}
+@mixin paddingLeftRight($paddingLeftRight) { padding: 0px $paddingLeftRight;}
+
+@mixin borderRadius($radius){
+    -webkit-border-radius : $radius;
+       -moz-border-radius : $radius;
+        -ms-border-radius : $radius;
+            border-radius : $radius;
+}
+
+
+/*=====COLOR STYLE =====*/
+$primaryBtnColor : #034078;
+$grayBgColor : #EBEBEB;
+
+
+
+/*=====TITLE STYLE =====*/
+@mixin titleHev($fontSize, $textColor, $lineHeight){  
+    @extend %font-helvetica; 
+    @extend %fullWrap; 
+    font-size: $fontSize; 
+    color:$textColor; 
+    line-height: $lineHeight;
+    letter-spacing: 1px;
+}
+
+@mixin titleHevNeu($fontSize, $textColor, $lineHeight){  
+    @extend %font-helvetica-neue; 
+    @extend %fullWrap; 
+    font-size: $fontSize; 
+    color:$textColor; 
+    line-height: $lineHeight;
+    letter-spacing: 1px;
+}
+
+@mixin titleHevNeu_B($fontSize, $textColor, $lineHeight)
+{  
+    @include titleHevNeu($fontSize, $textColor, $lineHeight);
+    font-weight: bold;
+}
+@mixin titleHevNeu_CAP($fontSize, $textColor, $lineHeight)
+{  
+    @include titleHevNeu($fontSize, $textColor, $lineHeight);
+    text-transform: uppercase; 
+    
+}
+
+@mixin titleHevNeu_CAP_B($fontSize, $textColor, $lineHeight)
+{  
+    @include titleHevNeu($fontSize, $textColor, $lineHeight);
+    text-transform: uppercase; 
+    font-weight: bold;
+}
+
+@mixin titleHev_CAP_B($fontSize, $textColor, $lineHeight)
+{  
+    @include titleHev($fontSize, $textColor, $lineHeight);
+    letter-spacing: 0px;
+    text-transform: uppercase; 
+    font-weight: bold;
+}
+
+@mixin paraHevNeu_fluid($fontSize, $textColor, $lineHeight){  
+    @include titleHevNeu($fontSize, $textColor, $lineHeight);
+}
+
+@mixin paraHev_fluid($fontSize, $textColor, $lineHeight){  
+    @include titleHev($fontSize, $textColor, $lineHeight);
+}
+
+.title_header1{
+    @include titleHev(30px, #000, 40px);
+    font-weight: bold;
+    span{
+        font-weight: normal;
+        font-size: 25px;
+        letter-spacing: 0px;
+        color: #666;
+    }
+}
+.title_header1_CAP{
+    @include titleHev(30px, #000, 40px);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/*=====FORM STYLE =====*/
+.labelTxt{ 
+    @extend %fullWrap; 
+    @include titleHev(16px, #4a4a4a, 30px );
+    font-weight: normal;
+}
+
+.inputTxtStyle{
+    @extend %fullWrap; 
+    @include titleHevNeu(14px, #2F3337, 24px );
+    @include borderRadius(2px);
+    @include paddingAll(5px);
+    height: 44px;
+    border: 1px solid #DADCDF;
+    background-color: #F9FAFB;
+    font-weight: 600;
+}
+
+%btnBlueStyle{
+    @extend %font-helvetica;
+    background-color: #034078;
+    color:#fff;
+    height: 44px;
+    text-align: center;
+    border:0px;
+}
+
+.formRowWrap{
+    @extend %fullWrap; 
+    @include marginTopBottom(10px);
+    position: relative;
+}
+
+
+.errorTxt{
+    @include borderRadius(3px);
+    @include titleHevNeu_B(12px, #D8000C, 20px );
+    width: auto;
+    background-color: #FFBABA;
+    position: absolute; 
+    right: 0px; 
+    top: 80px; 
+    padding: 5px 10px;
+    border-radius: 3px; 
+    z-index: 1; 
+    min-width: 120px;
+
+    &:before{ 
+        position: absolute; content: ''; 
+        border-bottom: 6px solid #FFBABA; 
+        border-left:6px solid transparent; 
+        border-right:6px solid transparent; 
+        right: 10px; top: -6px; 
+    }
+}
+
+@mixin tick($color){
+    &:before{
+      content: "\2713";
+      color:$color;
+      font-weight: bolder;
+    }
+}
+
+
+
+
+
+/**=== MEDIA STLYE =====**/
+@media only screen and (min-width:300px) and (max-width:1000px)
+{
+    .formWrap, .tablewrap{
+        max-width: 800px;
+    }
+
+    .ProfBenefitsBase{
+        .textLeftAlign, .textRightAlign{
+            text-align: center;
+        }
+    }
+}
+@media only screen and (min-width:300px) and (max-width:600px)
+{
+    .ProfBenefitsPoints{
+        padding-left: 0px
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#mainWrap {
+    @extend %fullWrap;
+    min-height: calc(100vh - 138px);
+    box-sizing: border-box;
+    //background-color: $bg-color;
+    // @extend %bg;
+}
+

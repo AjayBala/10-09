@@ -1,0 +1,2 @@
+export const GET_LOGIN_VALUES_TYPE = 'LOGIN_VALUES';
+export const GET_EMAILID_TYPE = 'GET_EMAILID';

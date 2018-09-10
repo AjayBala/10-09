@@ -1,0 +1,146 @@
+@import "../.././Style.scss";
+$font-weight: 300px;
+
+.shopping-preference {
+    max-width: 826px;
+    margin: 38px auto;
+    .shopping-description {
+        margin-bottom: 28.9px;
+        font-weight: $font-weight;
+        @include titleHev(28px, #2F3337, 28px);
+    }
+
+    .shopping-category {
+        width: 100%;
+        float: left;
+        border: 1px solid #AFB3BA;
+        border-radius: 2px;
+        box-sizing: border-box;
+        min-height: 262px;
+        margin-bottom: 18.9px;
+        .search {
+            border: 1px solid #E7E8EA;
+            i {
+                padding: 8px;
+            }
+            input {
+                border: 0;
+                font-size: 12px;
+                line-height: 15px;
+                color: #9B9B9B;
+                @extend %font-helvetica;
+                width: 231px;
+                font-weight: $font-weight;
+            }
+        }
+    }
+    
+    .shopping-selected {
+        min-height: 156px;
+        width: 100%;
+        float: left;
+        border: 1px solid #AFB3BA;
+        border-radius: 2px;
+        box-sizing: border-box;
+    }
+
+    .shopping-label {
+        padding: 9.8px;
+        color: #939393;
+        line-height: 28px;
+        @extend %font-helvetica;
+    }
+
+    .removeCloseIcon {
+        display: none;
+    }
+
+    .closeIconOvrride {
+        float: right;
+        margin-top: 6px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .categories {
+        @extend %textAlignCenter;
+        border: 1px solid #d6dade;
+        margin-left: 8px;
+        margin-right: 8px;
+        border-radius: 12px;
+        font-size: 12px;
+        padding: 5px;
+        color: #545658;
+        margin-bottom: 10px;
+        cursor:pointer;
+        @extend %font-helvetica;
+        font-weight: $font-weight;
+    }
+
+    .suggested-search {
+        width: 162px;
+    }
+
+    .selected-button {
+        border: 1px solid #CED1D5;
+        background-color: #F5F6F7;
+    }
+
+    .closeIconStyle {
+        float: right;
+    }
+
+    .noCategoryFound {
+        text-align: center;
+        @extend %font-helvetica;
+        color: #939393;
+        line-height: 28px;
+        font-weight: $font-weight;
+        font-size: 18px;
+    }
+
+    .customScrollBar {
+        overflow-y: auto;
+        max-height: 262px;
+        overflow-x: hidden;
+        position: relative;
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(250, 3, 118, 0);
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+        }
+    }
+
+    .customScrollBarSelected {
+        max-height: 156px;
+    }
+
+    .formBtnWrap{ 
+        width:100%; 
+        float: left; 
+        @extend %textAlignCenter;
+        padding:30px 0px;
+    }
+
+    .form-style {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;    
+    }
+
+    .terms {
+        font-size: 13px;
+        width: 100%;
+        float: left;
+        padding: 15% 0 0 0;
+    }
+
+    .buttonOverrides {
+        @include paddingLeftRight(10px);
+    }
+    
+}

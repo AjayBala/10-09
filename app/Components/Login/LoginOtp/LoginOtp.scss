@@ -1,0 +1,101 @@
+@import "../../../Style.scss";
+
+.containInnerWrap{ 
+    @extend %fullWrap; 
+    @include marginTopBottom(80px);
+}
+.title_h1{
+    @include titleHev(24px,#496580, 30px);
+    @include paddingTopBottom(20px);
+    letter-spacing: 0px;
+    text-align: center;
+}
+
+.sendcode{
+    padding-top: 10px;
+}
+
+.otpFirst{ 
+    @include paddingAll(30px);
+}
+
+.loginBoxWrap{ width:90%; max-width: 362px; margin: 0px auto ; padding: 40px 0px;}
+.loginBox{ 
+    @extend %fullWrap; 
+    @include paddingAll(30px);
+    @include borderRadius(3px);
+    margin-bottom: 50px;
+}
+.loginBox form { @extend %fullWrap;  }
+
+.labelTxt_2{ @include titleHev(14px,#222, 20px); font-weight: normal; } 
+.loginBox .form-control{ box-shadow: inherit; border:0px; background-color: #f1f1f1; height: 38px; }
+
+.btnSignIn{ 
+    @extend %fullWrap;
+    @include borderRadius(3px);
+    @include paddingTopBottom(10px);
+    @include titleHev(14px,#fff, 20px);
+    margin-top: 15px; 
+    border:1px solid #9b9b9b;
+    background: #1e377a;
+    cursor: pointer;
+   
+}
+.btnSignIn:hover{ background-color: #777;   }
+.forgotTxt{
+    @extend %fullWrap;
+    text-align: center; 
+    padding-top: 20px;
+}
+
+/*
+.SignupWrap{ width:96%; max-width: 500px; margin: 30px auto; }
+
+.SignupWrap > form{  width:100%; float: left; background-color: rgba(255, 255, 255, 0.6); padding: 20px; box-sizing: border-box; border-radius:6px;}
+.title_1{ width:100%; float: left;font-weight: normal; text-transform: uppercase; font-size: 24px; line-height: 30px; color:#222; padding: 0px 10px; box-sizing: border-box;}
+.formWrapList{ width:100%; float: left; margin: 20px 0px }
+.formWrapList > li{ width:100%; float: left; margin: 5px 0px; list-style: none; padding:0px 10px; box-sizing: border-box; }
+.formWrapList .inputTxt{background:rgba(0,0,0,0.5); border:0px; color:#fff;font-size:14px;letter-spacing:0.5px;line-height:30px;padding:5px 10px;text-align:left;width:100%;box-sizing:border-box;text-align:left;height:40px;}
+.inputTxt::placeholder { color: rgba(255,255,255,0.1); }
+.formWrapList textarea.inputTxt{height:100px;resize:none;}
+.btn-submit{position: relative;
+    background: #0095e2;
+    float: left;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 0px;}
+.btn-reset{position: relative;
+    float: left;
+    padding: 0px 20px;
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 2px solid rgba(0,0,0,0.6);
+    box-sizing: border-box;
+    background-color: transparent;
+    height: 36px;
+    line-height: 32px;
+    margin-left: 10px;
+}    
+.btn-submit:disabled{ background-color: #666; cursor: not-allowed;}
+   
+
+
+
+.logoWrap{ width:100%; float: left; text-align: center; border-bottom: 1px solid #eee; padding: 10px; box-sizing: border-box;}
+.logoImg{ display: inline-block; height:60px;}
+
+.loginBox h2{ width:100%; float: left; padding: 4px 0px; box-sizing: border-box; font-size: 22px;}
+
+
+
+.rca-styles {
+    background-color: red;
+}
+
+*/

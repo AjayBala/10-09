@@ -1,0 +1,12 @@
+/********************************/
+@import "../../Style.scss";
+
+#footerWrap{ @extend %fullWrap;  }
+#footerWrap .footerNav_1 { @extend %fullWrap;  background-color: #f3f3f3;}
+#footerWrap .footerNav_1 li{ float: left;}
+#footerWrap .footerNav_1 li a{ float: left; color:#1c1c1c;}
+#footerWrap .footerNav_1 li a:hover{ float: left; color:#ff1f2c; background-color: transparent;}
+#footerWrap .footerNav_2 {  background-color: transparent; }
+.vl{ border-left: 1px solid black; height: 22px;margin-left: 190px;margin-top: -18px}
+.footerline{display: inline;color: black;padding-right: 0px;}
+

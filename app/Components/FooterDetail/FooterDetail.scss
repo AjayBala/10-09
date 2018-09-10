@@ -1,0 +1,149 @@
+@import "../../Style.scss";
+
+
+.mainContentWrap{  @extend %fullWrap;  }
+
+.iconFullWrap{ 
+    @include paddingTopBottom(50px);
+    .iconBoxWrap{
+        @extend %centerAlignWrap;
+        .iconBox{
+            width:50px;
+            height:50px;
+            line-height:50px;
+            text-align: center;
+            border: 1px solid #979797;
+            background-color: rgba(216,216,216,0.5);
+            font-size: 12px;
+        }
+        a{
+            @include paraHev_fluid(14px, #000, 22px);
+            text-align: center;
+            @include paddingTopBottom(10px);
+            .arrowdown{
+                display: inline-block;
+                margin-left: 5px;
+                font-size: 16px;
+                color: $primaryBtnColor;
+            }
+        }
+    }
+}
+
+
+.specialBuy{
+    @extend %fullWrap;
+    @include marginTopBottom(10px);
+    @include paddingAll(30px);
+    min-height:120px;
+    background-color: rgb(235, 235, 235);
+
+    .titleBox_1{
+        @include titleHev_CAP_B(30px, #000,40px);
+        @extend %fullWrap;
+        @extend %font-helvetica;
+        span{
+            @include titleHev(18px, #000, 22px);
+            text-transform: capitalize;
+        }
+    }
+
+    a{ float: right;}
+}
+
+.ProfBenefitsBox{ 
+    @extend %fullWrap;
+    @include paddingTopBottom(100px);
+     height:225px; 
+     border: 1px solid #979797; 
+     text-align:center; 
+     margin-top: 30px; 
+}
+
+
+
+
+.ProfBenefitsPoints{
+    @extend %fullWrap;
+    padding-left: 60px; 
+    margin-top: 30px;
+    h3{ font-size: 30px;}
+    ul{
+        margin-left: 18px;
+        margin-top: 20px;
+        li{ 
+            font-size: 15px;
+            list-style: disc;
+            @include paddingTopBottom(3px);
+        }
+    }
+    .videoBoxList li{ @include marginTopBottom(10px);  font-size:18px; }
+}
+
+.ProfBenefitsBase{
+    margin-top:70px; 
+    // @extend %centerAlignWrap;
+
+    .title_header1{
+        text-align:left;
+    }
+
+    .ProfBenefitsPoints{
+        text-align:left;
+    }
+
+    .boxOutsideWrap{
+        max-width: 280px;
+        float: none;
+        display:inline-block;
+    }
+
+}
+
+.boxOutsideWrap{
+    @extend %fullWrap;
+    @include marginTopBottom(20px);
+
+    figcaption{
+        @extend %fullWrap;
+        @include titleHev(22px, #222, 30px);
+        @include paddingTopBottom(10px);
+        text-align: center;
+    }
+    .box1{ 
+        @extend %fullWrap;
+        @include paddingAll(100px);
+        @include borderRadius(10px);
+        height:225px;
+        border: 1px solid #979797;
+        text-align: center;}
+}
+
+.paragraph_Txt{ 
+    @extend %fullWrap;
+    @include marginTopBottom(20px);
+    @include paraHev_fluid(13px, #000, 16px);
+    text-align: left;
+}
+
+.signBtnOutWrap{ 
+    @extend %centerAlignWrap;
+    @include marginTopBottom(30px);
+}
+.navigatebutton {
+    @include titleHev(24px, #000, 30px);
+    @include paddingAll(20px);
+    background-color: #f1f1f1;
+    width: 100%;
+    border: 0px;
+    max-width: 480px;
+    display: inline-block;
+    box-sizing: border-box;
+    float: none;
+}
+
+.listtype {list-style-type: none; text-align: left;}
+.linkStyle_1{ font-weight: 600; color:#222; font-size: 16px;}
+.linkStyle_1 i{ color:#0485cc; margin-left: 10px; font-size: 22px; font-weight: 600;}
+.marginBottom{ margin-bottom: 100px;}
+

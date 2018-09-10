@@ -1,0 +1,22 @@
+@import "../../Style.scss";
+
+.formWrap.shopYesNoWrap{
+    margin-top:60px;
+    max-width: 560px; 
+}
+/* .ShopYesorNo-formWrap {margin: 28% 0px;} */
+.ShopYesorNo-formWrap .control-label{ color:#fff;}
+.YesButton { color:#fff; background-color: #034078; border-radius: 3px; margin: 5px 30px; display: inline-block; border:0px;min-width: 150px; padding: 10px 12px;}
+.NoButton { color:#666; background-color: #e6e6e6; border-radius: 3px; margin: 5px 30px; display: inline-block; border:0px;min-width: 150px; padding: 10px 12px;}
+.YesButton:hover, .NoButton:hover{ background-color: #999; color:#fff; }
+.loginButton:hover{ background-color: #999; color: #fff;}
+.shopYesNoWrap .signInTxt{ @extend %fullWrap;  @include paddingTopBottom(10px); font-size: 14px; }
+.shopYesNoWrap .shopEmailTxt{ @extend %fullWrap;  font-size: 17px; line-height: 30px; @include paddingTopBottom(10px);}
+.shopYesNoWrap .signInTxt a:hover{ color:#ff1f2c; text-decoration: none;}
+.shopYesNoWrap.formWrap { text-align: center;}
+
+@media only screen and (min-width:1100px) and (max-width:2000px)
+{
+    .container { width: 96%; max-width: 1600px;}
+}
+

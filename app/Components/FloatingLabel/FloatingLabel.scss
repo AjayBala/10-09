@@ -1,0 +1,20 @@
+/********************************/
+@import "../../Style.scss";
+
+.errorBorder {
+    margin-bottom: 9px !important;
+    label{
+        > input{
+            border-color:#f00 !important;
+        }
+    }
+}
+
+.error_text{
+    @extend %fullWrap;
+    @include titleHev(12px, #e74b24, 16px );
+    margin-top: 5px;
+    padding-left: 5px;
+    text-align: left;
+}
+

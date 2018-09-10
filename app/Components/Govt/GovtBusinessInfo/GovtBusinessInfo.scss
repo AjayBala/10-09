@@ -1,0 +1,51 @@
+@import "../../../Style.scss";
+
+
+
+.SqaureText {
+    border-radius: 0%
+}
+
+.logoWrap{  padding: 10px; @extend %fullWrap;@extend%textAlignCenter;}
+
+/*.container{
+    width:47%;
+    height: 80vh;
+    margin-left:33%;
+    margin-top:5%; 
+}*/
+.Formpagewrap{   
+    margin-left:2%;
+    padding: 45px;
+    width:68%;
+    height: 61vh;
+}
+.Formbuttonwrap{ 
+    margin-left: 35%;
+    margin-top:10%;
+}
+.phonetextwrap{
+
+    margin-top:5%;
+}
+.zip  input[type=number]::-webkit-inner-spin-button, .zip input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.number input[type=number]::-webkit-inner-spin-button, .zip input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+
+.GovHeaderTxtWrap{@include titleHev(28px,black, 30px);margin:30px auto 40px auto; text-align: center;}
+
+.GovHeaderTxtWrap b{font-weight: 500}
+
+.customRadioBtn{margin: 58px 0px;}
+
+.customPhoneBoxWrap{margin-bottom: auto}
+
+.errorPhnTxt{@include borderRadius(3px);@include titleHevNeu_B(12px, #D8000C, 20px );width: auto;background-color: #FFBABA;position: absolute; right: -10px; top: 35px; padding: 5px 14px;border-radius: 3px; z-index: 1; min-width: 78px;
+    &:before{ 
+        position: absolute; content: ''; 
+        border-bottom: 6px solid #FFBABA; 
+        border-left:6px solid transparent; 
+        border-right:6px solid transparent; 
+        right: 10px; top: -6px; 
+    }
+}
+

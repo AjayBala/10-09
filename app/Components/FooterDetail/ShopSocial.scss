@@ -1,0 +1,124 @@
+@import "../../Style.scss";
+
+
+.labelWhiteTxt {
+    color: white;
+  }
+  
+  .footerTopBoxWrap {
+    @extend %fullWrap;
+    @include paddingTopBottom(10px);
+    background-color: #545658;
+    border-bottom: 2px solid #fff;
+  }
+  .socialLinksWrap {
+    @extend %fullWrap;
+  }
+  .socialLinksWrap li {
+    @include marginLeftRight(20px);
+    float: left;
+    color: #fff;
+  }
+  .socialLinksWrap li a {
+    float: left;
+    @include paraHev_fluid(18px, #fff, 24px);
+  }
+  .socialLinksWrap li a:hover{
+    background-color: transparent;
+    color: #c7212b;
+  }
+  .socialLinksWrap li:first-child {
+    margin-left: 0;
+  }
+  .socialLinksWrap li:first-child a {
+    padding-left: 0;
+  }
+  
+  .title_h6 {
+    @extend %fullWrap;
+    font-size: 11px;
+    color: #fff;
+    font-weight: normal;
+  }
+  
+  .footerMenuWrap {
+    @extend %fullWrap;
+    @include paddingTopBottom(80px);
+  }
+  .footerMenuList {
+    @extend %fullWrap;
+    @include marginTopBottom(20px);
+  }
+  .footerMenuList li {
+    @extend %fullWrap;
+  }
+  .footerMenuList li a {
+    @include paraHev_fluid(14px, #fff, 18px);
+    @include paddingAll(2px);
+    float: left;
+  }
+  .footerMenuList li a:hover {
+    background-color: transparent;
+    color: #ff1f2c;
+  }
+  
+  .footerBottomBoxWrap {
+    @extend %fullWrap;
+    @include paddingTopBottom(15px);
+    background-color: #2f3337;
+    border-bottom: 2px solid #fff;
+  }
+  .footerContBox {
+    @extend %fullWrap;
+    @include paddingTopBottom(10px);
+  }
+  .footerContBox {
+    @extend %fullWrap;
+  }
+  .footerContBox {
+    color: #fff;
+  }
+  .footerContBox p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .socialButton {
+    border-radius: 3px;
+    margin: 5px 0;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    min-width: 150px;
+    padding: 10px 12px;
+  }
+  
+  .mt-0 {
+    margin-top: 0 !important;
+  }
+  
+  .p-0 {
+    padding: 0 !important;
+  }
+  
+  .pb-3 {
+    padding-bottom: 3rem !important;
+  }
+  
+  .mb-0 {
+    margin-bottom: 0 !important;
+  }
+  
+  .mb-2 {
+    margin-bottom: 2rem !important;
+  }
+  
+  .footer-links {
+    font-size: 14px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  

@@ -1,0 +1,1313 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app\Components\FooterDetail\FooterDetail.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">app/Components/FooterDetail/</a> FooterDetail.jsx
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.16% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>12/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.16% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>12/19</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react';
+import './FooterDetail.scss';
+import {
+    Grid, Row, Col, Button,
+} from 'react-bootstrap';
+import {
+    Events, animateScroll as scroll, scrollSpy,
+} from 'react-scroll';
+&nbsp;
+import ShopSocial from './ShopSocial';
+import {
+    governmentBuyersText,
+    aboutRights, aboutFederalCustomers,
+} from '../../../Utils/Utils';
+&nbsp;
+class FooterDetail extends Component {
+    componentDidMount () {
+        Events.scrollEvent.register('begin');
+&nbsp;
+        Events.scrollEvent.register('end');
+        scrollSpy.update();
+    }
+&nbsp;
+    componentWillUnmount() <span class="fstat-no" title="function not covered" >{</span>
+        Events.<span class="cstat-no" title="statement not covered" >scrollEvent.remove('begin');</span>
+        Events.<span class="cstat-no" title="statement not covered" >scrollEvent.remove('end');</span>
+    }
+&nbsp;
+    scrollToTop() <span class="fstat-no" title="function not covered" >{</span>
+        scroll.<span class="cstat-no" title="statement not covered" >scrollToTop();</span>
+    }
+&nbsp;
+    designer() <span class="fstat-no" title="function not covered" >{</span>
+        scroll.<span class="cstat-no" title="statement not covered" >scrollMore(1900);</span>
+    }
+&nbsp;
+    government() <span class="fstat-no" title="function not covered" >{</span>
+        scroll.<span class="cstat-no" title="statement not covered" >scrollMore(2950);</span>
+    }
+&nbsp;
+    corporate() <span class="fstat-no" title="function not covered" >{</span>
+        scroll.<span class="cstat-no" title="statement not covered" >scrollMore(5050);</span>
+    }
+&nbsp;
+    business() <span class="fstat-no" title="function not covered" >{</span>
+        scroll.<span class="cstat-no" title="statement not covered" >scrollMore(6050);</span>
+    }
+&nbsp;
+    render() {
+        return (
+            &lt;div className="mainContentWrap"&gt;
+                &lt;Grid&gt;
+                    &lt;section className="iconFullWrap"&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={6} md={3}&gt;
+                                &lt;div className="iconBoxWrap"&gt;
+                                    &lt;span className="iconBox"&gt; icon &lt;/span&gt;
+                                    &lt;a onClick={this.designer}&gt;
+                                    Designer
+                                        &lt;span className="arrowdown"&gt;
+                                            &lt;i className="fa fa-angle-down" aria-hidden="true" /&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={6} md={3}&gt;
+                                &lt;div className="iconBoxWrap"&gt;
+                                    &lt;span className="iconBox"&gt; icon &lt;/span&gt;
+                                    &lt;a onClick={this.government}&gt;
+                                    Government
+                                        &lt;span className="arrowdown"&gt;
+                                            &lt;i className="fa fa-angle-down" aria-hidden="true" /&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={6} md={3}&gt;
+                                &lt;div className="iconBoxWrap"&gt;
+                                    &lt;span className="iconBox"&gt; icon &lt;/span&gt;
+                                    &lt;a onClick={this.corporate}&gt;
+                                    Corporate
+                                        &lt;span className="arrowdown"&gt;
+                                            &lt;i className="fa fa-angle-down" aria-hidden="true" /&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={6} md={3}&gt;
+                                &lt;div className="iconBoxWrap"&gt;
+                                    &lt;span className="iconBox"&gt; icon &lt;/span&gt;
+                                    &lt;a onClick={this.business}&gt;
+                                    Small Business
+                                        &lt;span className="arrowdown"&gt;
+                                            &lt;i className="fa fa-angle-down" aria-hidden="true" /&gt;
+                                        &lt;/span&gt;
+                                    &lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;Row&gt;
+                        &lt;Col sm={12} md={6}&gt;
+                            &lt;div className="specialBuy"&gt;
+                                &lt;h1 className="titleBox_1"&gt;
+                                    SPECIAL BUY OF THE WEEK
+                                    &lt;span&gt;Free Shipping&lt;/span&gt;
+                                &lt;/h1&gt;
+                                &lt;a href="/login" className="linkStyle_1"&gt;
+                                    Shop Now
+                                    &lt;i className="fa fa-angle-right" aria-hidden="true" /&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/Col&gt;
+&nbsp;
+                        &lt;Col sm={12} md={6}&gt;
+                            &lt;div className="specialBuy"&gt;
+                                &lt;h1 className="titleBox_1"&gt;
+                                    BULK ORDER DEALS
+                                    &lt;span&gt;Discounts&lt;/span&gt;
+                                &lt;/h1&gt;
+                                &lt;a href="/login" className="linkStyle_1"&gt;
+                                    See Offers
+                                    &lt;i className="fa fa-angle-right" aria-hidden="true" /&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                    &lt;section className="ProfBenefitsBase"&gt;
+                        &lt;Row&gt;
+                            &lt;Col md={12}&gt;
+                                &lt;h3 className="title_header1"&gt; Professional Benefits &amp; Services &lt;/h3&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={12} md={5}&gt;
+                                &lt;div className="ProfBenefitsPoints"&gt;
+                                    &lt;h3&gt;&lt;b&gt;Save Time &amp; Money&lt;/b&gt;&lt;/h3&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;Exclusive Overstock Professional Pricing&lt;/li&gt;
+                                        &lt;li&gt;Bulk Order Discounts&lt;/li&gt;
+                                        &lt;li&gt;Free Returns&lt;/li&gt;
+                                        &lt;li&gt;Tax exempt purchasing&lt;/li&gt;
+                                        &lt;li&gt;Multiple user checkout&lt;/li&gt;
+                                        &lt;li&gt;Referral Discounts&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={12} md={7}&gt;
+                                &lt;div className="ProfBenefitsBox"&gt; image &lt;/div&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;section className="ProfBenefitsBase"&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={12} md={4} className="textLeftAlign"&gt;
+                                &lt;div className="boxOutsideWrap"&gt;
+                                    &lt;span className="box1"&gt;icon &lt;/span&gt;
+                                    &lt;figcaption&gt;Key Features &lt;/figcaption&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={12} md={4} className="textCenterAlign"&gt;
+                                &lt;div className="boxOutsideWrap"&gt;
+                                    &lt;span className="box1"&gt;icon &lt;/span&gt;
+                                    &lt;figcaption&gt;Key Features &lt;/figcaption&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={12} md={4} className="textRightAlign"&gt;
+                                &lt;div className="boxOutsideWrap"&gt;
+                                    &lt;span className="box1"&gt;icon &lt;/span&gt;
+                                    &lt;figcaption&gt;Key Features &lt;/figcaption&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;section className="ProfBenefitsBase"&gt;
+                        &lt;Row&gt;
+                            &lt;Col md={12}&gt;
+                                &lt;h3 className="title_header1"&gt; why overstock profesional? &lt;/h3&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={12} md={5}&gt;
+                                &lt;div className="ProfBenefitsPoints"&gt;
+                                    &lt;h3&gt;What makes us different&lt;/h3&gt;
+                                    &lt;ul className="videoBoxList"&gt;
+                                        &lt;li&gt;&lt;p&gt;-Summary of key points from video&lt;/p&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;p&gt;-Summary of key points from video&lt;/p&gt;&lt;/li&gt;
+                                        &lt;li&gt;&lt;p&gt;-Summary of key points from video&lt;/p&gt;&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={12} md={7}&gt;
+                                &lt;div className="ProfBenefitsBox"&gt; Video &lt;/div&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;section className="ProfBenefitsBase" id="designer"&gt;
+                        &lt;Row&gt;
+                            &lt;Col md={12}&gt;
+                                &lt;h3 className="title_header1"&gt; Designer Benefits  &lt;/h3&gt;
+                                &lt;p className="paragraph_Txt"&gt;Buyers from federal, state and local governments, the military and educational institutions will find The Home Depot ready to be your company of choice. Our dedicated Government Solutions team is available for procurement contracts, and national retail network allows us to tap into an unparalleled supply chain to offer a total solution to your needs.&lt;/p&gt;
+                            &lt;/Col&gt;
+                            &lt;Grid&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt; image &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt;Interior Designer&lt;/h3&gt;
+                                        &lt;/div&gt;
+                                        &lt;p className="paragraph_Txt"&gt;Buyers from federal, state and local governments, the military and educational institutions will find The Home Depot ready to be your company of choice. Our dedicated Government Solutions team is available for procurement contracts, and national retail network allows us to tap into an unparalleled supply chain to offer a total solution to your needs. &lt;/p&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt; Architect &lt;/h3&gt;
+                                        &lt;/div&gt;
+                                        &lt;p className="paragraph_Txt"&gt;Buyers from federal, state and local governments, the military and educational institutions will find The Home Depot ready to be your company of choice. Our dedicated Government Solutions team is available for procurement contracts, and national retail network allows us to tap into an unparalleled supply chain to offer a total solution to your needs. &lt;/p&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={12} className="signBtnOutWrap"&gt;
+                                        &lt;Button type="submit" className="navigatebutton" onClick={this.scrollToTop}&gt;Sign Up &lt;/Button&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                            &lt;/Grid&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;section className="ProfBenefitsBase" id="government"&gt;
+                        &lt;Row&gt;
+                            &lt;Col md={12}&gt;
+                                &lt;h3 className="title_header1"&gt; Solutions for Government Buyers  &lt;/h3&gt;
+                                &lt;div className="ProfBenefitsBox"&gt; image &lt;/div&gt;
+                                &lt;p className="paragraph_Txt"&gt;Buyers from federal, state and local governments, the military and educational institutions will find The Home Depot ready to be your company of choice. Our dedicated Government Solutions team is available for procurement contracts, and national retail network allows us to tap into an unparalleled supply chain to offer a total solution to your needs.&lt;/p&gt;
+                            &lt;/Col&gt;
+                            &lt;Col md={6} sm={12}&gt;
+                                &lt;ol className="listtype"&gt;
+                                    &lt;li&gt;■ COMPETITIVE PRODUCT PRICING &lt;/li&gt;
+                                    &lt;li&gt;
+                                    ■ DEDICATED NATIONAL SUPPORT TEAM &amp; 2,200 + LOCATIONS
+                                    &lt;/li&gt;
+                                    &lt;p className="spaceBuy"&gt;
+                                        {'There\'s no cost to participate and no minimum spending requirement to access:'}
+                                    &lt;/p&gt;
+                                    &lt;li className="spacePoints"&gt;• Expansive order and delivery options on over 300,000 products &lt;/li&gt;
+                                    &lt;li className="spacePoints"&gt;• Volume Pricing Program and special discounts on purchases across the store &lt;/li&gt;
+                                    &lt;li className="spacePoints"&gt;• Convenient payment options - purchase orders and procurement cards accepted &lt;/li&gt;
+                                    &lt;li className="spacePoints"&gt;• One-step tax exemption registration with email renewal reminders &lt;/li&gt;
+&nbsp;
+                                &lt;/ol&gt;
+                            &lt;/Col&gt;
+                            &lt;Col md={6} sm={12}&gt;
+                                &lt;ol className="listtype"&gt;
+                                    &lt;li&gt;■ LOW-COST AND RETURN OPTIONS&lt;/li&gt;
+                                    &lt;li&gt;■ CONVENIENT PAYMENT OPTIONS&lt;/li&gt;
+                                    &lt;p className="spaceBuy"&gt;U.S. Communities is a government cooperative purchasing program that combines and strengthens the purchasing power of public entities nationwide. The result is reduced cost and the assurance that your agency meets the requirements for competitive solicitation.&lt;/p&gt;
+                                    &lt;p&gt;Together we enable&lt;/p&gt;
+                                    &lt;li&gt;
+    • Reduced procurement costs on Maintenance, Repair and Operations supplies
+                                    &lt;/li&gt;
+                                    &lt;li&gt;• Purchasing without the need for RFPs&lt;/li&gt;
+                                    &lt;li&gt;• Compliance with competitive solicitation requirements&lt;/li&gt;
+                                    &lt;li&gt;
+    • Access to general contractors through the Renovation Services and Installation Services programs
+                                    &lt;/li&gt;
+                                    &lt;li&gt;• Ordering through the U.S. Communities Marketplace&lt;/li&gt;
+                                &lt;/ol&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={12}&gt;
+                                &lt;p className="paragraph_Txt"&gt;
+                                    {aboutRights}
+                                &lt;/p&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;section className="ProfBenefitsBase"&gt;
+                        &lt;Row&gt;
+                            &lt;Col md={12}&gt;
+                                &lt;h3 className="title_header1_CAP"&gt;SUPPORTING OUR FEDERAL CUSTOMERS&lt;/h3&gt;
+                                &lt;p className="paragraph_Txt"&gt;{aboutFederalCustomers}&lt;/p&gt;
+                                &lt;div className="ProfBenefitsBox"&gt; image &lt;/div&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;section className="ProfBenefitsBase"&gt;
+                        &lt;Row&gt;
+                            &lt;Col md={12}&gt;
+                                &lt;h3 className="title_header1_CAP"&gt;SIMPLIFYING TAX EXEMPTION&lt;/h3&gt;
+                                &lt;p className="paragraph_Txt"&gt;With our one-step tax exempt registration, tax exempt customers,including buyers for state and local governments or state-defined exempt organizations,retailers,resellers and manufacturers in longer have to complete the instore paperwork with every exempt transaction.&lt;/p&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;section className="ProfBenefitsBase"&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={12} md={4} className="textLeftAlign"&gt;
+                                &lt;div className="boxOutsideWrap"&gt;
+                                    &lt;span className="box1"&gt;icon &lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={12} md={4} className="textCenterAlign"&gt;
+                                &lt;div className="boxOutsideWrap"&gt;
+                                    &lt;span className="box1"&gt;icon &lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={12} md={4} className="textRightAlign"&gt;
+                                &lt;div className="boxOutsideWrap"&gt;
+                                    &lt;span className="box1"&gt;icon &lt;/span&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={12} className="signBtnOutWrap"&gt;
+                                &lt;Button type="submit" className="navigatebutton" onClick={this.scrollToTop}&gt;Sign Up &lt;/Button&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;section className="ProfBenefitsBase" id="corporate"&gt;
+                        &lt;Row&gt;
+                            &lt;Col md={12}&gt;
+                                &lt;h3 className="title_header1"&gt;
+                                    Corporate Benefits
+                                    &lt;span&gt; (overview &amp; educational) &lt;/span&gt;
+                                &lt;/h3&gt;
+                                &lt;p className="paragraph_Txt"&gt;Buyers from federal, state and local governments, the military and educational institutions will find The Home Depot ready to be your company of choice. Our dedicated Government Solutions team is available for procurement contracts, and national retail network allows us to tap into an unparalleled supply chain to offer a total solution to your needs.&lt;/p&gt;
+                            &lt;/Col&gt;
+                            &lt;Grid&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt; image &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt;Education Use Case Content&lt;/h3&gt;
+                                        &lt;/div&gt;
+                                        &lt;p className="paragraph_Txt"&gt;Buyers from federal, state and local governments, the military and educational institutions will find The Home Depot ready to be your company of choice. Our dedicated Government Solutions team is available for procurement contracts, and national retail network allows us to tap into an unparalleled supply chain to offer a total solution to your needs. &lt;/p&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt; Contractor Use Case Content &lt;/h3&gt;
+                                        &lt;/div&gt;
+                                        &lt;p className="paragraph_Txt"&gt;Buyers from federal, state and local governments, the military and educational institutions will find The Home Depot ready to be your company of choice. Our dedicated Government Solutions team is available for procurement contracts, and national retail network allows us to tap into an unparalleled supply chain to offer a total solution to your needs.&lt;/p&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={12} className="signBtnOutWrap"&gt;
+                                        &lt;Button type="submit" className="navigatebutton" onClick={this.scrollToTop}&gt;Sign Up &lt;/Button&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                            &lt;/Grid&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                    &lt;section className="ProfBenefitsBase" id="business"&gt;
+                        &lt;Row&gt;
+                            &lt;Col md={12}&gt;
+                                &lt;h3 className="title_header1"&gt;
+                                    Just Right for Your Small Business
+                                    &lt;span&gt; (overview &amp; educational) &lt;/span&gt;
+                                &lt;/h3&gt;
+                                &lt;p className="paragraph_Txt"&gt;
+                                    {governmentBuyersText}
+                                &lt;/p&gt;
+                            &lt;/Col&gt;
+                            &lt;Grid&gt;
+                                &lt;Row&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt;Designer Use Case Content&lt;/h3&gt;
+                                        &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt; Hospitality Use Case Content &lt;/h3&gt;
+                                        &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt;Hospitality Use Case Content&lt;/h3&gt;
+                                        &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt;Designer Use Case Content&lt;/h3&gt;
+                                        &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt;Dealership Use Case Content&lt;/h3&gt;
+                                        &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col md={6} sm={12}&gt;
+                                        &lt;div className="ProfBenefitsBox"&gt;
+                                            &lt;h3&gt;SBO Use Case Content&lt;/h3&gt;
+                                        &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col md={12} sm={12}&gt;
+                                        &lt;p className="paragraph_Txt"&gt;
+                                            {governmentBuyersText}
+                                        &lt;/p&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={12} className="signBtnOutWrap marginBottom"&gt;
+                                        &lt;Button type="submit" className="navigatebutton" onClick={this.scrollToTop}&gt;Sign Up &lt;/Button&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                            &lt;/Grid&gt;
+                        &lt;/Row&gt;
+                    &lt;/section&gt;
+                &lt;/Grid&gt;
+                &lt;ShopSocial /&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+&nbsp;
+export default FooterDetail;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Sep 10 2018 18:07:09 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

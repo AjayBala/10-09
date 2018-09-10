@@ -1,0 +1,122 @@
+.ShoppingBox
+{
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    top: 0px;
+    left: 30%;
+    position: absolute;
+}
+
+.Products
+{
+    margin-left: 42%;
+  margin-top: 8%;
+}
+
+.finalbutton
+
+{
+    margin-left: 33%;
+}
+
+
+.primarybtn, .secondarybtn
+{
+  background-color: dimgrey;
+  color:white;
+  width: 22%;
+  height: 45px;
+}
+
+.ShoppingBoxWrap
+
+{margin-left: 34%;
+
+}
+
+.terms {
+    font-size: 13px;
+    width: 100%;
+    float: left;
+    padding: 15% 0 0 0;
+}
+/* .text
+
+{
+    margin-left: 18%;
+} */
+
+
+
+
+.primarybtn, .secondarybtn
+
+{
+   width:17%;
+   border-radius: 4px;
+   border: 2px;
+   
+   
+}
+
+
+.box
+{
+    transform: scale(1.5);
+}
+
+/* .BottomField
+{
+    margin-left: -14%;
+} */
+/*
+.container {
+    width: 47%;
+    height: 80vh;
+    margin-left: 18%;
+    margin-top: -2%;
+}*/
+
+
+/* Below added by Ram */
+
+.checkopt{
+    cursor: pointer;
+    
+    }
+    .checkopt input[type="checkbox"] {
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        outline: 0;
+        background: lightgray;
+        height: 16px;
+        width: 16px;
+        border: 1px solid white;
+      }
+      
+      .checkopt input[type="checkbox"]:checked {
+        background: #4d4d4d;
+      }
+      
+      .checkopt input[type="checkbox"]:hover {
+        filter: brightness(90%);
+      }
+      
+      .checkopt  input[type="checkbox"]:after {
+        content: '';
+        position: relative;
+        left: 50%;
+        top: 30%;
+        width: 15%;
+        height: 40%;
+        border: solid #fff;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+        display: none;
+      }
+      
+      .checkopt input[type="checkbox"]:checked:after {
+        display: block;
+      }

@@ -1,0 +1,22 @@
+{
+    "store": [
+        "Baby",
+        "Clothing & Shoes",
+        "Electronics",
+        "Food & Gifts",
+        "Health & Beauty",
+        "Furniture",
+        "Jewellery & Watches",
+        "Sports & Toys",
+        "Office Supplies",
+        "Garage & Automotive"
+    ],
+    "departments": [
+        "Baby Gifts",
+        "Baby Bedding",
+        "Baby Gear",
+        "Bath & Skin Care",
+        "Baby Clothing",
+        "Baby Furniture"
+    ]
+}

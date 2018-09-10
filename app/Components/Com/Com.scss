@@ -1,0 +1,20 @@
+@import "../../Style.scss";
+
+
+.insideHeaderWrap{ padding: 10px 0px; background-color: whitesmoke; box-shadow: 0px 1px 2px rgba(0,0,0,0.2); box-sizing: border-box;}
+.titleTxt_1{  @include titleHev(22px,#496580, 25px);  @include paddingTopBottom(20px);  letter-spacing: 0px; text-align: center;}
+.logoImg{ /*float: left;*/ height:60px;}
+.navList{ float: right;}
+.navList li { float: left; margin: 5px;}
+.navList li a{ float: left; padding: 5px 10px; font-size: 14px; color:#555; text-transform: uppercase;}
+
+.stepProgressWrap >div > div > div { padding-top: 0px !important;}
+.stepProgressWrap >div > div > div > div:first-child {  width: 22px !important;  height: 22px !important;}
+.stepProgressWrap >div > div > div > div { font-size: 14px !important;}
+.stepProgressWrap >div > div > div > div:last-child { top: 10px !important;}
+.stepProgressWrap >div > div > div > div:nth-child(3) { top: 10px !important;}
+
+.stepProgressWrap a {
+    text-decoration: none !important;
+    cursor: pointer;
+}

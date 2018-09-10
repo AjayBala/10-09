@@ -1,0 +1,7 @@
+--compilers jsx:babel-register
+--require jsdom-global/register
+--require ignore-styles test/.setup.jsx
+--timeout 15000
+app/Components/**/*.test.jsx
+app/**/*.test.js
+app/**/*.test.jsx
